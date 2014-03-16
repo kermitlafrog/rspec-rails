@@ -9,7 +9,7 @@ describe "errors_on" do
 
   it "calls valid?" do
     model = klass.new
-    expect(model).to receive(:valid?)
+    expect(model).not_to receive(:valid?)
     model.errors_on(:foo)
   end
 
